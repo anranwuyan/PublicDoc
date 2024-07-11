@@ -1,4 +1,4 @@
-//
+...
 ;WITH XMLNAMESPACES  -- XML namespace def must be the first in with clause.  
     (DEFAULT 'http://schemas.microsoft.com/sqlserver/reporting/2006/03/reportdatasource'  
             ,'http://schemas.microsoft.com/SQLServer/reporting/reportdesigner'  
@@ -25,3 +25,6 @@ FROM
 -- WHERE CON.ConnString LIKE '%Initial Catalog%=%TFS%'  
 ORDER BY CON.[Path]  
         ,CON.SharedDsName;
+
+
+...
