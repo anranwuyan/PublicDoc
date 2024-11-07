@@ -37,6 +37,19 @@ Get-WmiObject -Namespace "root\mscluster" -class "MSCluster_Service" -ComputerNa
 
 winrm get winrm/config -r:Hostname
 
+
+4. enable credssp if needed.
+
+
+        winrm set winrm/config/service/auth @{CredSSP="True"}
+
+     winrm set winrm/config/winrs @{AllowRemoteShellAccess="True"}
+
+     winrm set winrm/config/winrs @{MaxMemoryPerShellMB="2048"}
+
+     winrm set winrm/config/client @{TrustedHosts="*"}
+
+     winrm set winrm/config/client/auth @{CredSSP="True"}
    
 
 
